@@ -2,38 +2,12 @@
 
 @import 'optional/variables';
 
-body {
-    background: $base-color;
-    color: $base-text-color;
-    font-weight: bold;
-    p {
-        &:after {
-            content: '';
-            display: block;
-            width: 20px;
-            height: 20px;
-            background: red;
-        }
-    }
-}
-
-.custom-list {
-  display: flex;
-    justify-content: space-around;
-}
-.custom-list-item {
-  color: green;
-  &:before {
-    content: 'Fantastic';
-    font-size: 2em;
-    color: pink;
-  }
-}
-
-.block-1 {
-  height: 1000px;
-}
-.block-2 {
+.slider-item {
+  background-color: #ccc;
+  width: 500px;
   height: 200px;
-  background: #f0f;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 5em;
+  line-height: 200px;
 }
