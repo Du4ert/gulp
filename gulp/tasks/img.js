@@ -6,7 +6,7 @@ module.exports = function() {
 
     $.gulp.task('img:build', function() {
     return $.gulp.src('src/img/*')
-        .pipe($.gp.image())
+        .pipe($.gp.cache($.gp.image()))
         .pipe($.gulp.dest('build/img/'))
     });
 }

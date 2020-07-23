@@ -15,11 +15,11 @@ $.path.tasks.forEach(function(taskPath) {
 });
 
 $.gulp.task('build', $.gulp.series(
-    $.gulp.parallel('pug', 'sass', 'script:lib', 'script', 'img:build'),
-    $.gulp.parallel('watch', 'serve')
+    $.gulp.parallel('clean', 'html', 'fonts', 'sass', 'script:lib', 'script', 'img:build'),
+    //$.gulp.parallel('watch', 'serve')
 ));
 
 $.gulp.task('default', $.gulp.series(
-    $.gulp.parallel('pug', 'sass', 'script:lib', 'script', 'img:dev'),
+    $.gulp.parallel('html', 'fonts', 'sass', 'script:lib', 'script', 'img:dev'),
     $.gulp.parallel('watch', 'serve')
 ));
