@@ -1,25 +1,14 @@
 <div class="container">
     <section class="main">
         <div class="row">
-
-            <article class="card resource col-lg-4 col-md-6 col-xs-12">
-                <img src="img/pic.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </article>
-            <article class="resource col-lg-4 col-md-6 col-xs-12">
-                Resource 1
-            </article>
-            <article class="resource col-lg-4 col-md-6 col-xs-12">
-                Resource 1
-            </article>
-            <article class="resource col-lg-4 col-md-6 col-xs-12">
-                Resource 1
-            </article>
-
-        </div>
+            @@loop('parts/article.html', [
+                {
+                "title": "Marine biological journal",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, ex",
+                "button": "search"
+                },
+                {"title": "Sci info", "description": "Lorem ipsum dolor sit amet.", "button": "GO"},
+                {}
+            ])
     </section>
 </div>
