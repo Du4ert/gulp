@@ -1,3 +1,4 @@
-$(document).ready(function() {
-    //$('.slider');
-})
+$(function () {
+    $('[data-toggle="popover"]').popover();
+    $('[data-toggle="tooltip"]').tooltip()
+  })

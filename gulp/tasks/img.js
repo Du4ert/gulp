@@ -1,12 +1,7 @@
 module.exports = function() {
-    $.gulp.task('img:dev', function() {
+    $.gulp.task('img', function() {
     return $.gulp.src('src/img/*')
-        .pipe($.gulp.dest('build/img/'))
-    });
-
-    $.gulp.task('img:build', function() {
-    return $.gulp.src('src/img/*')
-        .pipe($.gp.cache($.gp.image()))
+        .pipe($.gp.if($.env === 'production', $.gp.cache($.gp.image())))
         .pipe($.gulp.dest('build/img/'))
     });
 }
