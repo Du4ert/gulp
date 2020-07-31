@@ -1,10 +1,20 @@
-$theme-colors: (
-    "new": blue
-);
+// Colors
+$color-main: #fcf;
+$color-second: #fcd;
+$color-brand: blue;
+$color-feature: red;
 
-.hidden {
-    display: none;
-}
+// Text-colors
+$text-color-main: #000;
+$text-color-second: #ccc;
+$text-color-feature: red;
+$text-color-brand: #fff;
 
-$breadcrumb-divider: quote(">");
-$card-height: 100%;
+
+// Margins
+$margin-base: 10px;
+$margin-second: 5px;
+
+// Paddings
+$padding-base: 10px;
+$padding-second: 5px;

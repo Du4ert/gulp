@@ -1,0 +1,83 @@
+body {
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+button, input {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+input {
+    border: 1px solid $color-main;
+}
+
+button {
+    border: 1px solid $color-main;
+    background-color: $color-brand;
+    color: $text-color-brand;
+}
+
+// Common
+.show {
+    display: inherit !important;
+}
+
+.content {
+    margin: $margin-base 0;
+}
+
+.content-more {
+    width: 100%;
+    margin: $margin-base 0;
+}
+
+.more-trigger {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $text-color-brand;
+}
+
+
+
+.more-body {
+    display: none;
+    padding: $padding-base;
+    border: 1px solid $color-second;
+}
+
+.resourse-advanced {
+    width: 100%;
+    margin: $margin-base 0;
+}
+
+.advanced-group {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resource-img {
+    width: 100%;
+    height: auto;
+}

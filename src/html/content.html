@@ -1,16 +1,5 @@
 <div class="container">
-    <section>
-      @@include('bootstrap-test.html')
+    <section class="row">
+            @@loop('parts/article.html', [{}, {}, {}, {}, {}])
     </section>
-    <!-- <section class="row">
-            @@loop('parts/article.html', [
-                {
-                "title": "Marine biological journal",
-                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, ex",
-                "button": "search"
-                },
-                {"title": "Sci info", "description": "Lorem ipsum dolor sit amet.", "button": "GO"},
-                {}
-            ])
-    </section> -->
 </div>
