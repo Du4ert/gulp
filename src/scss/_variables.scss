@@ -1,8 +1,8 @@
 // Colors
-$color-main: #fcf;
-$color-second: #fcd;
+$color-main: #ccc;
+$color-second: #999;
 $color-brand: blue;
-$color-feature: red;
+$color-feature: #00B4CC;
 
 // Text-colors
 $text-color-main: #000;
@@ -12,9 +12,12 @@ $text-color-brand: #fff;
 
 
 // Margins
-$margin-base: 10px;
-$margin-second: 5px;
+$margin-base: 1rem;
+$margin-second: 0.5rem;
 
 // Paddings
-$padding-base: 10px;
-$padding-second: 5px;
+$padding-base: 1rem;
+$padding-second: 0.5rem;
+
+// Sizes
+$input-height: 2.5rem;

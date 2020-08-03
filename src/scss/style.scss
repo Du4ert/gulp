@@ -25,23 +25,70 @@ button, input {
 }
 
 input {
-    border: 1px solid $color-main;
+    height: $input-height;
+    border: 2px solid $color-feature;
 }
 
 button {
-    border: 1px solid $color-main;
-    background-color: $color-brand;
+    height: $input-height;
+    border: 1px solid $color-feature;
+    background-color: $color-feature;
     color: $text-color-brand;
+}
+
+.resource-group {
+    //background: url('../img/bg_hor.jpg') right bottom;
+    background: $color-second;
 }
 
 // Common
 .show {
     display: inherit !important;
+    visibility: visible !important;
 }
 
-.content {
+
+.resourse {
+    min-height: 300px;
     margin: $margin-base 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    //padding: 10px;
+    
 }
+
+.resourse-content {
+    margin: $margin-base 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.resource-img {
+    //margin: 20px;
+    width: 20%;
+    height: auto;
+    margin: 0 $margin-base;
+    //float: left;
+}
+
+.resource-text {
+    margin: 0 $margin-base;
+}
+
+.resourse-title {
+    color: $text-color-main;
+    line-height: 1em;
+    text-align: center;
+}
+
+
+
+
 
 .content-more {
     width: 100%;
@@ -54,30 +101,51 @@ button {
     justify-content: space-between;
     align-items: center;
     color: $text-color-brand;
+    border: 0;
+    border-radius: 0;
+    outline: none;
 }
 
 
 
 .more-body {
+    transition: all 5s ease-out;
+    visibility: hidden;
     display: none;
     padding: $padding-base;
-    border: 1px solid $color-second;
+    //border: 1px solid $color-second;
 }
 
 .resourse-advanced {
     width: 100%;
-    margin: $margin-base 0;
+    margin-top: auto;
+    padding-top: $padding-base;
+    border-top: 1px solid $color-second;
 }
 
-.advanced-group {
+.avaced-group {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    margin-bottom: $margin-base;
 }
 
-.resource-img {
-    width: 100%;
-    height: auto;
+.advanced-search {
+    position: relative;
+    .advanced-input {
+        width: 100%;
+        //height: 2.5rem;
+        padding-right: 2.5rem;
+    }
+    .advanced-button{
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 2.5rem;
+        width: $input-height;
+        border-radius: 0 0 5px 0;
+    }
+
+    .advanced-group-title {
+        width: 100%;
+    }
+
 }
