@@ -1,5 +1,6 @@
 body {
     font-size: 16px;
+    //font-family: 'Roboto', sans-serif;
 }
 
 h1 {
@@ -14,7 +15,7 @@ h3 {
 }
 
 h4 {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 button, input {
@@ -36,9 +37,13 @@ button {
     color: $text-color-brand;
 }
 
-.resource-group {
-    //background: url('../img/bg_hor.jpg') right bottom;
-    background: $color-second;
+a {
+    color: $text-color-link;
+}
+
+.container {
+    padding: 0;
+    margin: 0 auto;
 }
 
 // Common
@@ -48,104 +53,146 @@ button {
 }
 
 
-.resourse {
-    min-height: 300px;
-    margin: $margin-base 0;
-    overflow: hidden;
+// Resource
+
+.resource-group {
+    background: $color-second;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.5);
-    //padding: 10px;
-    
+    flex-flow: row wrap;
+    justify-content: space-around;
+    background: url('../img/bg_ver.jpg') $color-brand ;
+    //padding: 0 $margin-base;
 }
 
-.resourse-content {
-    margin: $margin-base 0;
+.resourse {
+    min-height: 200px;
+    min-width: 300px;
+    margin: $margin-base;
+    flex: 1 0 250px;
+    justify-content: space-between;
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+
+
+// .resource-content {
+//     display: flex;
+//     flex-flow: row nowrap;
+//     align-items: center;
+//     border-top: 1px solid $color-second;
+//     padding: $padding-base;
+//     margin-bottom: auto;
+// }
+
+// .resource-img {
+//     max-width: 200px;
+//     width: 30%;
+//     flex: 0 1 30%;
+//     margin: $margin-second;
+//     height: auto;
+// }
+
+// .resource-text {
+//     margin: $margin-second;
+//     flex: 1 0 60%;
+// }
+
+.resourse-title {
+    line-height: 1em;
+    text-align: center;
+    //margin: $margin-base;
+    padding: $padding-base;
+    color: $text-color-main;
+
+    &:after {
+        content: '';
+        display: inline-block;
+        width: 19px;
+        height: 13px;
+        background: url('../img/arrow.png') no-repeat right center;
+        margin-left: $margin-second;
+    }
+
+    span {
+        vertical-align: middle;
+        font-size: 0.8rem;
+    }
+    a {
+        vertical-align: baseline;
+        text-decoration: none;
+    }
+}
+
+.resource-content {
+    border-top: 1px solid $color-second;
+    padding: $padding-base;
+    margin-bottom: auto;
 }
 
 .resource-img {
-    //margin: 20px;
-    width: 20%;
+    max-width: 200px;
+    width: 30%;
     height: auto;
-    margin: 0 $margin-base;
-    //float: left;
+    float: left;
+    margin-right: $margin-base;
+    margin-bottom: $margin-second;
+    vertical-align: top;
+    //padding: $padding-second;
 }
 
 .resource-text {
-    margin: 0 $margin-base;
+    padding: 0 $padding-second;
+    vertical-align: top;
 }
 
-.resourse-title {
-    color: $text-color-main;
-    line-height: 1em;
-    text-align: center;
-}
-
-
-
-
-
-.content-more {
-    width: 100%;
-    margin: $margin-base 0;
-}
-
-.more-trigger {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: $text-color-brand;
-    border: 0;
-    border-radius: 0;
-    outline: none;
-}
-
-
-
-.more-body {
-    transition: all 5s ease-out;
-    visibility: hidden;
-    display: none;
-    padding: $padding-base;
-    //border: 1px solid $color-second;
-}
+// Resource advanced
 
 .resourse-advanced {
-    width: 100%;
-    margin-top: auto;
-    padding-top: $padding-base;
+    padding: $padding-base;
     border-top: 1px solid $color-second;
 }
 
-.avaced-group {
-    width: 100%;
-    margin-bottom: $margin-base;
+.advanced-group {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.advanced-nav-item {
+    margin-right: $margin-second;
+    &:after {
+        content: '|';
+        color: $color-second;
+    }
+    &:last-of-type {
+        margin-right: 0;
+        &:after {
+            content: '';
+        }
+    }
+    
+}
+
+.advanced-nav-link {
+    
 }
 
 .advanced-search {
     position: relative;
     .advanced-input {
         width: 100%;
-        //height: 2.5rem;
-        padding-right: 2.5rem;
+        padding-right: $input-height;
     }
     .advanced-button{
         position: absolute;
         right: 0;
         top: 0;
-        height: 2.5rem;
+        height: $input-height;
         width: $input-height;
-        border-radius: 0 0 5px 0;
+        border-radius: 0 5px 5px 0;
     }
-
-    .advanced-group-title {
-        width: 100%;
-    }
-
 }

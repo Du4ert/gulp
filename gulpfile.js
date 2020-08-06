@@ -26,11 +26,12 @@ $.gulp.task('set-dev', function(done) {
 });
 
 $.gulp.task('build', $.gulp.series(
-    $.gulp.parallel('set-prod',   'clean', 'html', 'fonts', 'sass', 'script:lib', 'script', 'img'),
-    //$.gulp.parallel('watch', 'serve')
+    $.gulp.parallel('clean', 'set-prod'),
+    $.gulp.parallel('html', 'fonts', 'sass', 'script:lib', 'script', 'img')
 ));
 
 $.gulp.task('default', $.gulp.series(
-    $.gulp.parallel('set-dev', 'html', 'fonts', 'sass', 'script:lib', 'script', 'img'),
+    $.gulp.parallel('set-dev'),
+    $.gulp.parallel('html', 'fonts', 'sass', 'script:lib', 'script', 'img'),
     $.gulp.parallel('watch', 'serve')
 ));
