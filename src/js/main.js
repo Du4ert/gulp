@@ -6,9 +6,9 @@ resources.forEach((item) => {
     const imgUrl = item.querySelector('.resource-img').src;
     const cover = item.querySelector('.resource-cover');
     
-    cover.style.backgroundImage = `url(${imgUrl})`;
+    //cover.style.backgroundImage = `url(${imgUrl})`;
     cover.addEventListener('click', function() {
-        this.classList.add('hide');
+        item.classList.add('hide');
         item.classList.add('show');
 
         document.body.addEventListener('click', function(e) {

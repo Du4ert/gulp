@@ -22,7 +22,7 @@ h4 {
 button, input {
     outline: none;
     border: none;
-    border-radius: 5px;
+    border-radius: $border-radius;
     padding: 5px 10px;
 }
 
@@ -62,26 +62,29 @@ a {
 // Resource
 
 .resource-group {
-    background: $color-second;
+    //background: $color-second;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row;
     justify-content: space-around;
-    background: url('../img/bg_ver.jpg') $color-brand ;
-    background-position: 50% 0;
-    background-attachment: fixed;
-    //padding: 0 $margin-base;
+    background: url('../img/bg_hor.jpg') $color-brand ;
+    background-position: bottom;
 }
 
 .resource {
     position: relative;
     margin: $margin-base;
-    min-width: 200px;
-    flex: 1 0 300px;
+    border-radius: $border-radius;
+    min-width: 100px;
+    max-height: 350px;
+    //flex: 1 0 300px;
+    flex: 1 1 100%;
     justify-content: space-between;
     display: flex;
-    flex-direction: column;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.5);
+    flex-direction: row;
+    padding: $padding-base;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 5;
 }
 
 .resource-cover {
@@ -90,40 +93,36 @@ a {
     bottom: 0;
     right: 0;
     left: 0;
+    //background: url('../img/bg_hor.jpg') $color-brand ;
     background-color: $color-brand;
-    background-image: url('../img/bg1.jpg');
+    background-position: bottom;
     background-size: cover;
     display: block;
+    border-radius: $border-radius;
+    z-index: 1;
 }
 
 .resource-title {
+    margin: 0 auto;
+    margin-bottom: $margin-base;
+    display: inline-block;
     line-height: 1em;
     text-align: center;
-    //margin: $margin-base;
-    padding: $padding-base;
     color: $text-color-main;
+    text-align: center;
 
-    &:after {
-        content: '';
-        display: inline-block;
-        width: 19px;
-        height: 13px;
-        background: url('../img/arrow.png') no-repeat right center;
-        margin-left: $margin-second;
-    }
-
-    span {
-        vertical-align: middle;
-        font-size: 0.8rem;
-    }
-    a {
-        vertical-align: baseline;
-        text-decoration: none;
-    }
+    // &:after {
+    //     content: '';
+    //     display: inline-block;
+    //     width: 19px;
+    //     height: 13px;
+    //     background: url('../img/arrow.png') no-repeat right center;
+    //     margin-left: $margin-second;
+    // }
 }
 
 .resource-content {
-    border-top: 1px solid $color-second;
+    //border-top: 1px solid $color-second;
     padding: $padding-base;
     margin-bottom: auto;
 }
@@ -148,30 +147,28 @@ a {
 // Resource advanced
 
 .resource-advanced {
-    padding: $padding-base;
-    border-top: 1px solid $color-second;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .advanced-group {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column;
     justify-content: flex-start;
-    align-content: flex-start;
+    align-items: stretch;
+    padding: $padding-base;
+    border-top: 1px solid $color-second;
+    &:first-of-type {
+        border-top: 0;
+    }
 }
 
-.advanced-nav-item {
-    margin-right: $margin-second;
-    &:after {
-        content: '|';
-        color: $color-second;
-    }
-    &:last-of-type {
-        margin-right: 0;
-        &:after {
-            content: '';
-        }
-    }
-    
+.advanced-nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .advanced-nav-link {
@@ -190,6 +187,8 @@ a {
         top: 0;
         height: $input-height;
         width: $input-height;
-        border-radius: 0 5px 5px 0;
+        border-radius: 0 $border-radius $border-radius 0;
     }
 }
+
+
