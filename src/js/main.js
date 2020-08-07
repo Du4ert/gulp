@@ -1,4 +1,26 @@
 const more = document.querySelectorAll('.content-more');
+const resources = document.querySelectorAll('.resource');
+
+
+resources.forEach((item) => {
+    const imgUrl = item.querySelector('.resource-img').src;
+    const cover = item.querySelector('.resource-cover');
+    
+    cover.style.backgroundImage = `url(${imgUrl})`;
+    cover.addEventListener('click', function() {
+        this.classList.add('hide');
+        item.classList.add('show');
+
+        document.body.addEventListener('click', function(e) {
+            const target = e.target;
+
+            if (target.closest('.resource') !== item) {
+                cover.classList.remove('hide');
+                item.classList.remove('show');
+            }
+        });
+    });
+})
 
 function toggleShow(elem) {
     elem.classList.toggle('show');

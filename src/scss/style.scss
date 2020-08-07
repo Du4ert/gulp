@@ -1,5 +1,5 @@
 body {
-    font-size: 16px;
+    font-size: 14px;
     //font-family: 'Roboto', sans-serif;
 }
 
@@ -9,6 +9,7 @@ h1 {
 h2 {
     font-size: 2rem;
 }
+
 
 h3 {
     font-size: 1.5rem;
@@ -52,6 +53,11 @@ a {
     visibility: visible !important;
 }
 
+.hide {
+    display: none !important;
+    visibility: hidden !important;
+}
+
 
 // Resource
 
@@ -61,14 +67,16 @@ a {
     flex-flow: row wrap;
     justify-content: space-around;
     background: url('../img/bg_ver.jpg') $color-brand ;
+    background-position: 50% 0;
+    background-attachment: fixed;
     //padding: 0 $margin-base;
 }
 
-.resourse {
-    min-height: 200px;
-    min-width: 300px;
+.resource {
+    position: relative;
     margin: $margin-base;
-    flex: 1 0 250px;
+    min-width: 200px;
+    flex: 1 0 300px;
     justify-content: space-between;
     display: flex;
     flex-direction: column;
@@ -76,31 +84,19 @@ a {
     background: rgba(255, 255, 255, 0.5);
 }
 
+.resource-cover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: $color-brand;
+    background-image: url('../img/bg1.jpg');
+    background-size: cover;
+    display: block;
+}
 
-
-// .resource-content {
-//     display: flex;
-//     flex-flow: row nowrap;
-//     align-items: center;
-//     border-top: 1px solid $color-second;
-//     padding: $padding-base;
-//     margin-bottom: auto;
-// }
-
-// .resource-img {
-//     max-width: 200px;
-//     width: 30%;
-//     flex: 0 1 30%;
-//     margin: $margin-second;
-//     height: auto;
-// }
-
-// .resource-text {
-//     margin: $margin-second;
-//     flex: 1 0 60%;
-// }
-
-.resourse-title {
+.resource-title {
     line-height: 1em;
     text-align: center;
     //margin: $margin-base;
@@ -134,6 +130,7 @@ a {
 
 .resource-img {
     max-width: 200px;
+    //max-height: 200px;
     width: 30%;
     height: auto;
     float: left;
@@ -150,7 +147,7 @@ a {
 
 // Resource advanced
 
-.resourse-advanced {
+.resource-advanced {
     padding: $padding-base;
     border-top: 1px solid $color-second;
 }
