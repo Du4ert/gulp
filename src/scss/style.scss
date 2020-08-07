@@ -49,22 +49,28 @@ a {
 
 // Common
 .show {
-    display: inherit !important;
-    visibility: visible !important;
+
 }
 
 .hide {
-    display: none !important;
-    visibility: hidden !important;
+
 }
 
+.active {
+    .resource-cover {
+        opacity: 0;
+    }
+
+    flex-basis: 100% !important;
+    order: -1;
+}
 
 // Resource
 
 .resource-group {
     //background: $color-second;
     display: flex;
-    flex-flow: row;
+    flex-flow: row wrap;
     justify-content: space-around;
     background: url('../img/bg_hor.jpg') $color-brand ;
     background-position: bottom;
@@ -74,10 +80,10 @@ a {
     position: relative;
     margin: $margin-base;
     border-radius: $border-radius;
-    min-width: 100px;
+    min-width: 200px;
     max-height: 350px;
     //flex: 1 0 300px;
-    flex: 1 1 100%;
+    flex: 0 0 20%;
     justify-content: space-between;
     display: flex;
     flex-direction: row;
@@ -100,6 +106,9 @@ a {
     display: block;
     border-radius: $border-radius;
     z-index: 1;
+    font-size: 2rem;
+    text-align: center;
+    color: $text-color-brand;
 }
 
 .resource-title {
