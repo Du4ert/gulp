@@ -57,33 +57,40 @@ a {
 }
 
 .active {
+    position: absolute;
     .resource-cover {
         opacity: 0;
+        z-index: -1;
     }
+    max-height: inherit !important;
 
-    flex-basis: 100% !important;
-    order: -1;
+    flex: 1 0.000000001 100% !important;
+    order: 2;
 }
 
 // Resource
 
 .resource-group {
-    //background: $color-second;
+    margin: auto;
+    background: relative;
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
-    background: url('../img/bg_hor.jpg') $color-brand ;
+    //background: url('../img/bg_hor.jpg') $color-brand ;
     background-position: bottom;
+    //transition: flex 0.4s ease;
 }
 
 .resource {
+    box-sizing: border-box;
     position: relative;
-    margin: $margin-base;
+    margin: $margin-second;
+    max-height: 250px;
+    //min-width: 200px;
     border-radius: $border-radius;
-    min-width: 200px;
-    max-height: 350px;
     //flex: 1 0 300px;
-    flex: 0 0 20%;
+    flex: 1 1 15%;
     justify-content: space-between;
     display: flex;
     flex-direction: row;
@@ -91,6 +98,19 @@ a {
     overflow: hidden;
     background: rgba(255, 255, 255, 0.8);
     z-index: 5;
+    // background: url('../img/bg_hor.jpg') bottom center  $color-brand ;
+    &:after {
+        content: "";
+        background: url('../img/bg_hor.jpg') bottom center;
+        opacity: 0.5;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;   
+      }
+    //transition: flex 0.4s ease;
 }
 
 .resource-cover {
@@ -99,16 +119,25 @@ a {
     bottom: 0;
     right: 0;
     left: 0;
-    //background: url('../img/bg_hor.jpg') $color-brand ;
-    background-color: $color-brand;
-    background-position: bottom;
-    background-size: cover;
+    background: url('../img/bg_hor.jpg') repeat-x 0 bottom  $color-brand ;
+    //background-size: cover;
     display: block;
     border-radius: $border-radius;
     z-index: 1;
     font-size: 2rem;
+    padding: $padding-base;
     text-align: center;
+    //color: rgba(255, 255, 255, 0.5
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-content: center;
+}
+
+.cover-title {
     color: $text-color-brand;
+    opacity: 1;
+    font-size: 24px;
 }
 
 .resource-title {
@@ -118,29 +147,18 @@ a {
     line-height: 1em;
     text-align: center;
     color: $text-color-main;
-    text-align: center;
-
-    // &:after {
-    //     content: '';
-    //     display: inline-block;
-    //     width: 19px;
-    //     height: 13px;
-    //     background: url('../img/arrow.png') no-repeat right center;
-    //     margin-left: $margin-second;
-    // }
+    font-size: 24px;
 }
 
 .resource-content {
-    //border-top: 1px solid $color-second;
     padding: $padding-base;
     margin-bottom: auto;
+    flex-grow: 1;
 }
 
 .resource-img {
-    max-width: 200px;
-    //max-height: 200px;
-    width: 30%;
-    height: auto;
+    height: 300px;
+    width: auto;
     float: left;
     margin-right: $margin-base;
     margin-bottom: $margin-second;
@@ -201,3 +219,20 @@ a {
 }
 
 
+.header {
+    margin: $margin-base 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.footer {
+    margin-top: $margin-base;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}

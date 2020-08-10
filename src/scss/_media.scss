@@ -4,7 +4,7 @@
         font-size: 14px;
     }
     .resource-group {
-        background: url('../img/bg_ver.jpg') $color-brand ;
+        //background: url('../img/bg_ver.jpg') $color-brand ;
         background-position: 100% 0;
     }
 
@@ -16,7 +16,11 @@
     }
     .resource {
         flex-direction: column;
-        max-height: 100%;
+        flex-basis: 100%;
+        //max-height: 100%;
+        &:after {
+            background: url('../img/bg_ver.jpg') center right;
+        }
     }
 
     .advanced-group {

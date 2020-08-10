@@ -1,78 +1,38 @@
 <article class="resource">
-  <div class="resource-cover"></div>
+  <div class="resource-cover">
+    <h3 class="cover-title">
+      @@title
+    </h3>
+  </div>
   <div class="resource-content">
-    <h3 class="resource-title"><a href="#" class="resource-title-link">Marine biological journal</a></h3>
-    <img src="img/mbj.jpg" class="resource-img" alt="Mbj">
-    <p class="resource-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae voluptatem corrupti
-      atque ullam rerum enim mollitia sed sint quaerat fugiat.</p>
+    <h3 class="resource-title"><a href="@@link" class="resource-title-link">@@title</a></h3>
+    <a href="@@link"><img src="img/@@img" class="resource-img" alt="Mbj"></a>
+    <p class="resource-text">@@text</p>
   </div>
   <div class="resource-advanced">
+    @@if (nav === true) {
     <div class="advanced-group">
     <h4 class="advanced-title">Навигация:</h4>
-    <ul class="advanced-nav">
-      <li class="advanced-nav-item">
-        <a href="#" class="advanced-nav-link">Главная страница</a>
-      </li>
-      <li class="advanced-nav-item">
-        <a href="#" class="advanced-nav-link">Редколлегия</a>
-      </li>
-      <li class="advanced-nav-item">
-        <a href="#" class="advanced-nav-link">Архив</a>
-      </li>
-      <li class="advanced-nav-item">
-        <a href="#" class="advanced-nav-link">О нас</a>
-      </li>
-    </ul>
-  </div>
+      <ul class="advanced-nav">
+        @@for (var i = 0; i < navList.length; i++) {
+          <li class="advanced-nav-item">
+            <a href="`+navList[i].link+`" class="advanced-nav-link">`+navList[i].title+`</a>
+          </li>
+        }
+      </ul>
+    </div>
+    }
+    @@if (search === true) {
     <div class="advanced-group">
-    <h4 class="advanced-title">Поиск по сайту:</h4>
-    <div class="advanced-search">
-    <form action="#" method="GET">
-        <input type="search" class="advanced-input" placeholder="Поиск...">
-        <button class="advanced-button fa fa-search"></button>
-    </form>
+      <h4 class="advanced-title">Поиск по сайту:</h4>
+      <div class="advanced-search">
+      <form action="#" method="GET">
+          <input type="search" class="advanced-input" placeholder="Поиск...">
+          <button class="advanced-button fa fa-search"></button>
+      </form>
+      </div>
     </div>
+    }
     </div>
-  </div>
-
+  
 </article>
-
-<article class="resource">
-  <div class="resource-cover"></div>
-  <div class="resource-content">
-    <h3 class="resource-title"><a href="#" class="resource-title-link">SciInfo</a></h3>
-    <img src="img/pic.png" class="resource-img" alt="Mbj">
-    <p class="resource-text">Lorem ipsum dolor si
-      atque ullam rerum enim mollitia sed sint quaerat fugiat.</p>
-  </div>
-  <div class="resource-advanced">
-    <div class="advanced-group">
-    <h4 class="advanced-title">Навигация:</h4>
-    <ul class="advanced-nav">
-      <li class="advanced-nav-item">
-        <a href="#" class="advanced-nav-link">Главная страница</a>
-      </li>
-      <li class="advanced-nav-item">
-        <a href="#" class="advanced-nav-link">Редколлегия</a>
-      </li>
-      <li class="advanced-nav-item">
-        <a href="#" class="advanced-nav-link">Архив</a>
-      </li>
-      <li class="advanced-nav-item">
-        <a href="#" class="advanced-nav-link">О нас</a>
-      </li>
-    </ul>
-  </div>
-    <div class="advanced-group">
-    <h4 class="advanced-title">Поиск по сайту:</h4>
-    <div class="advanced-search">
-    <form action="#" method="GET">
-        <input type="search" class="advanced-input" placeholder="Поиск...">
-        <button class="advanced-button fa fa-search"></button>
-    </form>
-    </div>
-    </div>
-  </div>
-
-</article>
-
